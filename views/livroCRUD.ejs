@@ -1,0 +1,37 @@
+<!-- Formulário de Adição de Livros -->
+<h2>Cadastro de livro</h2>
+<h3>Preencher dados de um Livro</h3>
+<form action="/livro/" method="post">
+  <input type="text" placeholder="Nome do livro" name="nome" required />
+  <input type="text" placeholder="Autor" name="autor" required />
+  <input type="number" placeholder="Páginas" name="paginas" required />
+  <input type="number" placeholder="Preço" name="preco" required />
+  <button type="submit">Adicionar</button>
+</form>
+<!-- Tabela de Livros -->
+<h3>Todos os Livros</h3>
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Autor</th>
+    <th>Paginas</th>
+    <th>Preço</th>
+    <th>Estado</th>
+    <th>Remover</th>
+  </tr>
+  <% dados.forEach(elemento => { %>
+  <tr>
+    <td><%= elemento.nome %></td>
+    <td><%= elemento.autor %></td>
+    <td><%= elemento.paginas %></td>
+    <td><%= elemento.preco %></td>
+    <td><%= elemento.estado %></td>
+    <td>
+      <form action="/livro/remover" method="post">
+        <input type="hidden" name="nome" value="<%= elemento.nome %>" />
+        <button type="submit">Remover</button>
+      </form>
+    </td>
+  </tr>
+  <% }) %>
+</table>

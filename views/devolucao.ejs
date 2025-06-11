@@ -1,0 +1,28 @@
+<h2>Devolução de livro</h2>
+<!-- Tabela de Livros -->
+<h3>Livros Emprestados</h3>
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Autor</th>
+    <th>Paginas</th>
+    <th>Preço</th>
+    <th>Ação</th>
+  </tr>
+  <% dados.forEach(elemento => { %>
+  <tr>
+    <td><%= elemento.nome %></td>
+    <td><%= elemento.autor %></td>
+    <td><%= elemento.paginas %></td>
+    <td><%= elemento.preco %></td>
+    <td>
+      <% if (elemento.estado === "Emprestado") { %>
+      <form action="/livro/devolver" method="post">
+        <input type="hidden" name="nome" value="<%= elemento.nome %>" />
+        <button type="submit">Devolver</button>
+      </form>
+      <% } %>
+    </td>
+  </tr>
+  <% }) %>
+</table>

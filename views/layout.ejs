@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= titulo %></title>
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body>
+  <header>
+    <h1>Sistema de Gestão de Biblioteca</h1>
+    <nav>
+      <a href="/">Principal</a>
+      <a href="/livro">Cadastro de livro</a>
+      <a href="/livro/emprestimo">Empréstimo de livro</a>
+      <a href="/livro/devolucao">Devolução de livro</a>
+      <a href="/sobre">Sobre</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Aqui será inserido o conteúdo dinâmico -->
+    <%- body %>
+  </main>
+
+  <footer>
+    <p>&copy; 2025</p>
+  </footer>
+</body>
+</html>
