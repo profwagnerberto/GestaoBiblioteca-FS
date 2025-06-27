@@ -38,3 +38,6 @@ Supondo que a string de conexão esteja correta, o aplicativo Node se conectou p
 Problemas para se conectar à instância do MongoDB Atlas?
 1. Verificar se a string de conexão, fornecida pela interface do usuário do Atlas, está válida. Leia mais aqui: https://docs.atlas.mongodb.com/driver-connection/ .
 2. Verificar se o endereço IP atual foi adicionado à lista de acesso na interface do usuário do Atlas. Leia mais aqui: https://docs.atlas.mongodb.com/security-whitelist/ .
+
+## Exemplo
+Uma versão do aplicativo pode ser acessada em: https://gestaobiblioteca-nwmx.onrender.com/
